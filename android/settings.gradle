@@ -1,0 +1,3 @@
+rootProject.name = 'Chart1'
+
+include ':app'
