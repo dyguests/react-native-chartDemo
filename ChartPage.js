@@ -11,7 +11,7 @@ import {
 import Chart from 'react-native-chart';
 
 const data = [
-    [0, 1],
+    ['你好', 1],
     [1, 3],
     [3, 7],
     [4, 9],
@@ -25,7 +25,7 @@ export default class ChartPage extends Component {
                     style={styles.chart}
                     data={data}
                     verticalGridStep={5}
-                    type="line"/>
+                    type="bar"/>
             </View>
         );
     }
