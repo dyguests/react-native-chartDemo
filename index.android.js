@@ -11,20 +11,24 @@ import {
     Text,
     View
 } from 'react-native';
+import Chart from 'react-native-chart';
+
+const data = [
+    [0, 1],
+    [1, 3],
+    [3, 7],
+    [4, 9],
+];
 
 class Chart1 extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit index.android.js
-                </Text>
-                <Text style={styles.instructions}>
-                    Shake or press menu button for dev menu
-                </Text>
+                <Chart
+                    style={styles.chart}
+                    data={data}
+                    verticalGridStep={5}
+                    type="line"/>
             </View>
         );
     }
@@ -35,17 +39,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: 'white',
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
+    chart: {
+        width: 200,
+        height: 200,
     },
 });
 
